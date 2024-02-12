@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply_box {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: -25px 0px 20px -20px rgba(0, 0, 0, 0.45),
+    25px 0px 20px -20px rgba(0, 0, 0, 0.45),
+    0px -25px 20px -20px rgba(0, 0, 0, 0.45),
+    0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+.title_small {
+  font-size: 20px;
+}
+
+.form_container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  padding: 6px 10px;
+  border: 1px solid black;
+  font-size: 15px;
+  font-style: italic;
+  mix-blend-mode: color-burn;
+}
+
+input,
+select,
+textarea:focus {
+  outline-color: 2px solid black;
+}
+
+.button_container {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+button {
+  background-color: black;
+  border: transparent solid 2px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.textarea_control {
+  grid: 1 / span 2;
+}
+.textarea_control textarea {
+  width: 100%;
+}
+@media (max-width: 460px) {
+  .textarea_control {
+    grid-column: 1 / span 1;
+  }
+}
